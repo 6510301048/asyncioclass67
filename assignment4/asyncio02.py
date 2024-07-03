@@ -25,6 +25,7 @@ async def main():
     for task in started_tasks:
         await task
 
+
 # run the main coroutine
 asyncio.run(main())
 
