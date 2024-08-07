@@ -1,7 +1,7 @@
 import requests as requests
 import time
 import random
-from pypokemon.pokemon import Pokemon
+from pypokemon.pokemon import Pokemon 
 
 def get_pokemon(url):
     print(f"{time.ctime()} - get {url}")

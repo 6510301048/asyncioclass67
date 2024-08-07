@@ -13,7 +13,7 @@ async def main():
         for number in rand_list:
             pokemon_url = f'https://pokeapi.co/api/v2/pokemon/{number}'
             print(f"{time.ctime()} - get {pokemon_url}")
-            resp = await client.get(pokemon_url)
+            resp = await client.get(pokemon_url) # ยิงเข้าทีละตัว
             pokemon_json = resp.json()
             pokemon_object = Pokemon(pokemon_json)
             pokemon_data.append(pokemon_object)
