@@ -8,11 +8,13 @@ move_pair = 30
 def game(x):
     board_start_time = time.perf_counter()
     for i in range (move_pair):
+        #print(f"BOARD-{x} {i+1} Judit thinking of make move")
+        #We think for 5 seconds.
         time.sleep(my_compute_time)
-        print(f'BOARD-{x+1} {i+1} Judit ')
-
+        print(f'BOARD-{x+1} {i+1} Judit made a move')
+        #The opponent thinks for 5 seconds
         time.sleep(opponent_compute_time)
-        print(f'BOARD-{x+1} {i+1} Opponents made move.')
+        print(f'BOARD-{x+1} {i+1} Opponents made move')
     print(f"BOARD- {x+1} - >>>>>>>>>>>>>> Finished move in {round (time.perf_counter() - board_start_time)}secs\n")
     return round(time.perf_counter() - board_start_time)
 
