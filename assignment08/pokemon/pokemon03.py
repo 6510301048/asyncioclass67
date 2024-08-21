@@ -25,7 +25,7 @@ async def get_pokemons():
 
         Pokemons = await asyncio.gather(*tasks)
         return Pokemons
-    
+
 async def index():
     start_time = time.perf_counter()
     pokemons = await get_pokemons()
